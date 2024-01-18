@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="springboot_dtod_final_project">
+		<class>com.springboot.dtod.consultation.domain.Consultation</class>
+		<class>com.springboot.dtod.contactus.domain.Consultation</class>
+		<class>com.springboot.dtod.login.model.MemberVO</class>
+		<class>com.springboot.dtod.notice.domain.AdminNotice</class>
+		<class>com.springboot.dtod.pay.domain.PayVO</class>
+		<class>com.springboot.dtod.singIn.model.MemberVO</class>
+	</persistence-unit>
+</persistence>
