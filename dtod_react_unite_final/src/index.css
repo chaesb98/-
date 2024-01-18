@@ -1,0 +1,27 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* 프리텐다드 : https://noonnu.cc/font_page/694 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+/* 디자인 하우스: https://noonnu.cc/font_page/89 */
+@font-face {
+  font-family: 'designhouseOTFLight00';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/designhouseOTFLight00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #0F1A25 !important;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

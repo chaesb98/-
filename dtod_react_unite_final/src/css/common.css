@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+ul, li{
+    list-style: none;
+}
+
+*{
+    /* color: #fff; */
+    font-family: 'Pretendard-Regular';
+}
+
+#nav{
+    padding: 35px 0 35px 35px !important;
+    background-color: #0F1A25 !important;
+}
+
+.logo{
+    display: flex !important;
+    align-items: center !important;
+    height: 100px !important;
+}
+
+.logo img{
+    width: 110px;
+    /* border: 1px solid red; */
+}
+
+.nav-link{
+    color: #fff !important;
+}
+
+.navbar-nav{
+    padding-left: 40% !important;
+}
+
+.nav-link{
+    padding: 0 20px !important;
+}
+
+a.nav-link:hover{
+    color: #E72D5A !important;
+}
+
+body{
+    background-color: #0F1A25 !important;
+}
+
+
+
+/* 미디어 쿼리 : 태블릿 992px 미만 적용 */
+/* 0.02px을 빼는 이유 = 브라우저는 현재 범위 컨텍스트 쿼리를
+지원하지 않으므로 더 높은 정밀도의 값을 사용하여 분수 너비
+(예 : 높은 dpi 기기의 특정 조건에서 발생할 수 있음)가 있는
+min- 및 max- 접두사 및 뷰포트의 제한 사항을 해결하기 위해서 입니다. */
+/* 초소형 세로폰 : 576px 미만, max-width: 575.98px */
+/* 소형 가로폰 : 768px 미만, max-width: 767.98px */
+/* 데스크톱 PC : 1200px 미만, max-width: 1199.98px */
+/* 대형 데스크탑 PC : 1400px 미만, max-width: 1399.98px */
+@media(max-width: 575.98px){
+    .logo{
+        transform: translateX(-85%) !important;
+    }
+}
+
+@media (max-width: 991.98px){
+    .logo{
+        margin-left: 50%;
+        transform: translateX(-100%);
+    }
+    .logo img{
+        width: 70px;
+    }
+    a.nav-link{
+        padding: 10px !important;
+    }
+    .navbar-nav{
+        padding-left: 0% !important;
+        text-align: center;
+        padding-right: 11%;
+    }
+    .navbar-toggler{
+        background-color: #50B7CD !important;
+    }
+}
+
+
+/* footer Style */
+.pink{
+    color: #E72D5A;
+}
+
+.f_div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4% !important;
+}
+
+#footer{
+    background-color: #0F1A25;
+  }
+  
+  footer{
+    overflow: hidden;
+  }
+  
+  footer .footer_left{
+    padding: 4%;
+    float: left;
+  }
+  
+  .f_logo{
+    display: flex;
+    /* width: 40%; */
+  
+  }
+  
+  .f_logo img:nth-of-type(1){
+    width: 70%;
+    margin-bottom: 2.2%;
+  }
+  
+  .f_logo img:nth-of-type(2){
+    width: 40%;
+    margin-left: 28px;
+  }
+  
+  
+  .f_cs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4%;
+  }
+  
+  
+   .f_cs a button{
+    font-size: 12px;
+    color: #fff;
+    border-radius: 5px;
+    border: solid 1.3px #fff;
+    background: none;
+    padding: 10px 13px;
+    font-weight: bold;
+  }
+  
+  .f_time span{
+    display: block;
+    width: 100%;
+    margin-left: 32px;
+    font-size: 13px;
+    color: #fff;
+  }
+  
+  .f_time span:first-child{
+    font-weight: bold;
+  }
+  
+  .f_con p{
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  
+  .footer_right{
+    padding: 0 3% 3% 3%;
+    float: right;
+    justify-content: right;
+    padding-right: 2%;
+  }
+  
+  
+  .most-asked #free-quote {
+    border-radius: 23px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+    padding: 60px;
+    margin-left: 45px;
+    background-color: #fff;
+  }
+  
+  #free-quote .section-heading-footer{
+    margin-bottom: 0px;
+  }
+  
+  #free-quote .section-heading-footer h2{
+    margin-bottom: 15px;
+  }
+  
+  #free-quote input.search_btn {
+    width: 100%;
+    height: 46px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 0px 15px;
+    font-size: 14px;
+    color: #2a2a2a;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  
+  #free-quote input.search_btn::placeholder {
+    color: #a5a5a5;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #free-quote button {
+    border: none;
+    height: 46px;
+    background-color: #E72D5A;
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    transition: all .4s;
+    font-size: 20px;
+  }
+  
+  #free-quote button:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 992px) {
+
+    .f_div{
+      display: block;
+    }
+
+    .footer_left{
+      float: none;
+      width: 100%;
+      padding-top: 10%;
+      margin-top: 6%;
+      padding-left: 3%;
+    }
+  
+    .f_logo img:nth-of-type(1){
+      width: 18%;
+      margin-bottom: 3%;
+    }
+    
+    .f_logo img:nth-of-type(2){
+      width: 40%;
+      margin-left: 28px;
+    }
+  
+    .footer_right{
+      float: none;
+      width: 100%;
+      padding-bottom: 6%;
+    }
+    
+  }

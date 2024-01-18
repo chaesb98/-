@@ -1,0 +1,61 @@
+/* subscribe.css */
+
+.heading{
+    padding-top: 80px;
+    margin-bottom: 50px;
+    margin-left: 16px;
+}
+
+tbody, td, tfoot, th, thead, tr{
+    border-style: none !important;
+}
+
+.card{
+    background-color: #0F1A25 !important;
+    margin-bottom: 100px;
+    border: none !important;
+}
+
+.card b{
+    color: #000;
+    font-weight: bold !important;
+    font-size: 24px;
+}
+
+
+
+.first_tr th{
+    background-color: #917790 !important;
+    color: #3F133D !important;
+}
+
+.table td{
+    background-color: #0F1A25 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #aaa !important;
+}
+
+.first_th{
+    background-color: #0F1A25 !important;
+    color: #E72D5A !important;
+    border-bottom: 1px solid #aaa !important;
+}
+
+.pagination{
+    justify-content: flex-end;
+}
+
+.active>.page-link, .page-link.active {
+    z-index: 3;
+    color: var(--bs-pagination-active-color) !important;
+    background-color: #E72D5A !important;
+    border-color: #E72D5A !important;
+}
+
+.card .disabled>.page-link{
+    color: #000 !important;
+}
+
+.page-item button{
+    color: #888 !important;
+}

@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.main_banner_img{
+  width: 100%;
+  padding: 0% 0 10% 0;
+}
+
+.main_banner_container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .main_banner_img {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .banner_text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* 텍스트 색상 설정 */
+  }
+  
+  .banner_text h2 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .banner_text p {
+    font-size: 3em;
+  }
+
+  .mainVideo{
+    margin-bottom: 8%;
+  }

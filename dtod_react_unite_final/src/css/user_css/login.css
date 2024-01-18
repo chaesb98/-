@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* 로그인 */
+
+.container-sm{
+    margin-bottom: 100px;
+}
+
+.login_header{
+    text-align: center;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.pointColor{
+    color: #E72D5A;
+    letter-spacing: 2.5px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.btn_login{
+    background-color: #50B7CD !important;
+    border: none;
+    color: #0F1A25;
+    font-weight: bold;
+}
+
+.btn_login:hover{
+    background-color: #E72D5A;
+    border: none;
+    font-weight: bold;
+}
+
+.signup_center{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.text_signup{
+    font-size: 16px;
+    text-decoration: underline;
+    color: #50B7CD !important;
+}
+
+.text_signup:hover{
+    color: #E72D5A !important;
+}
+
