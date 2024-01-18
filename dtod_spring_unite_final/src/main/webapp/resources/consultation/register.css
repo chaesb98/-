@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'designhouseOTFLight00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/designhouseOTFLight00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.panel-body{
+    padding: 1% 16%;
+    background-color: #0F1A25;
+}
+input:focus{
+    border: 0.7px solid #E72D5A !important;
+    box-shadow: none !important;
+}
+
+textarea:focus{
+    border: 0.7px solid #E72D5A !important;
+    box-shadow: none !important;
+}
+
+.panel-body p{
+    font-size: 3em !important;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2%;
+    font-family: 'designhouseOTFLight00';
+    margin-bottom: 100px;
+	margin-top:30px;
+}
+
+.panel-body .form-group{
+    font-size: 1rem;
+    margin-bottom: 2%;
+    color: #fff;
+}
+
+.input-group{
+    width: 350px;
+}
+
+.form-control,.input-group-text{
+    border: 0.7px solid #E1D9E4;
+    background-color: #E1D9E4;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 18px;
+    font-size: 0.7rem;
+}
+
+.input-group-text{
+    background-color: #0F1A25;
+    color: #fff;
+}
+
+
+
+.sub_btn{
+    background-color: #50B7CD ;
+    border:  1px solid #50B7CD;
+    border-radius: 5px;
+    color: #0F1A25;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.sub_btn:hover{
+	color: #fff;
+}
+
+.reset_btn{
+    background-color: #E72D5A ;
+    border:  1px solid #E72D5A;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.reset_btn:hover{
+	color: #0F1A25;
+}
+
+.panel-body .goList{
+	background-color: #50B7CD ;
+    border:  1px solid #50B7CD;
+    border-radius: 5px;
+    color: #0F1A25;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 10px 8px;
+    font-size: 12px
+}
+
+.panel-body .goList:hover{
+	color: #fff;
+}
+

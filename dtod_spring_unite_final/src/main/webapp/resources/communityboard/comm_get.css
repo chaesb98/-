@@ -1,0 +1,200 @@
+body{
+	background-color: #0F1A25;
+	color: #fff;
+}
+
+.reply_row{
+    padding: 6% 12%;
+    margin-top:-5%;
+}
+
+
+.panel-body{
+	background-color: #0F1A25;
+    padding-bottom: 0%;
+}
+
+input:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+
+textarea:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+.panel-body p{
+    font-size: 3em !important;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2%;
+}
+
+
+.reply_panel p{
+    font-size: 1.6rem !important;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 15px;
+    width: 86%;
+}
+
+.reply_panel .fa{
+    color: #fff;
+    display: block;
+    font-size: 1.6em;
+    width: 50px;
+    text-align: left;
+}
+
+
+.reply_tit{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.chat li{
+    width: 100%;
+    padding: 15px 0px;
+    border-bottom: 1px solid #aaa;
+}
+
+.pull-right{
+    justify-content: right;
+    float: right;
+    margin-top:2%;
+}
+
+.panel-body .form-group{
+    font-size: 1rem;
+    margin-bottom: 2%;
+}
+
+.panel-body .form-group label{
+	font-size: 1.5rem;
+}
+
+.form-control,.input-group-text{
+    background: #E1D9E4;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+.form-group .retitle{
+	font-size: 1.2rem;
+}
+
+.form-group .recontent{
+	font-size: 1.0rem;
+}
+
+.sub_btn{
+    border:  1px solid #50B7CD;
+    border-radius: 5px;
+    color: #0F1A25;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.reset_btn{
+    background-color: #50B7CD ;
+    border:  1px solid #50B7CD;
+    border-radius: 5px;
+    color: #0F1A25;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+
+.reply_btn{
+    /* justify-content: right; */
+    border:  1px solid #50B7CD;
+    border-radius: 5px;
+    color: #0F1A25;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+}
+#myModal .modal-title{
+	color: #000;
+}
+#myModal label{
+	color: #000;
+}
+
+/*여기서부터 지은*/
+
+.comm_get_button{
+	line-height: 1;
+	border: 1px solid pink;
+	border-radius:3px;
+	float:right !important;
+	margin-top:1%;
+	margin-left:1%;
+}
+
+.comm_get_button, .comm_get_reply_reg{
+	background-color:white;
+	color:black !important;
+}
+
+.comm_get_button:hover, 
+.comm_get_reply_reg:hover{
+	background-color: #917790;
+	color:#fff !important;
+	border: 1px solid pink;
+}
+
+.comm_get_reply_reg{
+	padding: 4px 16px;
+	border:1px solid pink;
+}
+
+.comm_get_modal_updatebtn{
+	background-color:#FCD9D7;
+	border: 1px solid pink;
+	color:#333 !important;
+}
+.comm_get_modal_updatebtn:hover{
+	background-color:#FFC3BF;
+	border: 1px solid pink;
+	color:#333 !important;
+}
+.comm_get_modal_deletebtn{
+	background-color:#BADEEC;
+	border: 1px solid pink;
+	color:#333 !important;
+}
+
+.comm_get_modal_deletebtn:hover{
+	background-color:#A8DAED;
+	border: 1px solid pink;	
+	color:#333;	
+}
+
+.comm_get_modal_closebtn{
+	color:#333 !important;
+	border: 1px solid pink;
+}
+.comm_get_modal_closebtn:hover{
+	border: 1px solid pink;
+}
+
+.active>.page-link, .page-link.active{
+	background-color:white;
+	border:1px solid pink;
+	color:#333;
+}

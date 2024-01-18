@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- MyBatis xml 파일 작성 시 반드시 mapper 태그의 namespace 속성값을
+     Mapper 인터페이스와 동일한 이름으로 설정해야 합니다. -->
+<mapper namespace="org.zerock.mapper.UserNoticeMapper">
+
+	<!-- Page338 아래 BoardMapper.xml의 목록과 데이터 개수 처리 소스 코딩  -->
+    <!-- sql태그와 include 태그 활용 검색 데이터의 개수 처리 -->
+    <!-- MyBatis는 sql 태그를 이용해서 SQL의 일부를 별도로 보관하고,
+            필요한 경우에 include 시키는 형태로 사용할 수 있습니다. -->
+	<sql id="criteria">
+    	<trim prefix="(" suffix=") AND " prefixOverrides="OR">
+			<foreach item="type" collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'T'.toString()">
+								notitle like '%'||#{keyword}||'%'
+						</when>
+						<when test="type == 'C'.toString()">
+								nocontent like '%'||#{keyword}||'%'
+						</when>
+						<when test="type == 'W'.toString()">
+								nowriter like '%'||#{keyword}||'%'
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+    </sql>
+	
+	<!-- 특정글 상세 보기를 위한 쿼리문 작성 -->
+	<!-- SELECT * from notice where nobno = 1  -->
+	<select id="read" resultType="org.zerock.domain.UserNoticeVO">
+		SELECT * from notice where nobno = #{nobno}
+	</select>
+	
+	<!-- getListWithPaging 메서드 처리 태그를 추가해 줍니다. -->
+	<!-- 리스트 페이징 처리를 위함 쿼리문 작성 -->
+	<select id="getListWithPaging" resultType="org.zerock.domain.UserNoticeVO">
+		<![CDATA[
+		SELECT nobno, notitle, nocontent, nowriter, nodate, noupdate
+		FROM (
+			SELECT
+			/*+ INDEX_DESC(notice pk_notice) */
+			ROWNUM rn, nobno, notitle, nocontent, nowriter, nodate, noupdate
+			from notice
+			WHERE
+		]]>
+		
+		<!-- include 태그 삽입 적용함 -->
+		<include refid="criteria"></include>
+		
+			
+		<![CDATA[
+			 ROWNUM <= #{pageNum} * #{amount}
+			)
+		WHERE RN > (#{pageNum} - 1) * #{amount} 
+		order by nobno desc
+		]]>	
+	</select>
+	
+	<!-- 하단 select 태그 id="getTotalCount" 소스 코딩 -->
+    <!-- 위에 sql 태그는 id 속성을 이용해서 필요한 경우에 동일한 SQL의 일부를 재사용할 수 있게 합니다. -->
+    <!-- 전체 데이터를 가져와 주는 쿼리문 작성 -->
+	<select id="getTotalCount" resultType="int">
+		SELECT count(*) FROM notice 
+		WHERE 
+		<include refid="criteria"></include>
+		
+		nobno > 0
+	</select>
+	
+</mapper>

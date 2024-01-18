@@ -1,0 +1,68 @@
+
+@font-face {
+    font-family: 'designhouseOTFLight00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/designhouseOTFLight00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+	font-family: 'designhouseOTFLight00' !important;
+}
+
+.pink{
+	color:#E72D5A;
+	font-weight: bold;
+}
+
+.product-item:hover .bg-secondary{
+	background-color: #E72D5A;
+}
+
+.new{
+	background-color: #50B7CD;
+	font-size: 16px;
+}
+
+.hot{
+	background-color: #E72D5A;
+	font-size: 16px;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: #fff !important;
+    background-color: #E72D5A;
+    border-color: #E72D5A;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #E72D5A !important;
+    --bs-btn-border-color: #E72D5A !important;
+    --bs-btn-hover-bg: #E72D5A !important;
+    --bs-btn-hover-border-color: #E72D5A !important;
+    --bs-btn-active-bg: #E72D5A !important;
+    --bs-btn-active-border-color: #E72D5A !important;
+    --bs-btn-disabled-color: #E72D5A !important;
+    --bs-btn-disabled-border-color: #E72D5A !important;
+}
+
+.nav-item a{
+	margin-left: 3px;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #E72D5A !important;
+    --bs-btn-border-color: #E72D5A !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #E72D5A !important;
+    --bs-btn-hover-border-color: #D1214C !important;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #D1214C !important;
+    --bs-btn-active-border-color: #D1214C !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #E72D5A !important;
+    --bs-btn-disabled-border-color: #E72D5A !important;
+}

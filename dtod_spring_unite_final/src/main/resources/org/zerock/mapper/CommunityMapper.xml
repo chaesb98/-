@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- MyBatis xml 파일 작성 시 반드시 mapper 태그의 namespace 속성값을
+     Mapper 인터페이스와 동일한 이름으로 설정해야 합니다. -->
+<mapper  namespace="org.zerock.mapper.CommunityMapper">
+	<sql id="criteria">
+			<trim prefix="(" suffix=") AND " prefixOverrides="OR" >
+					<foreach item="type" collection="typeArr">
+						<trim prefix="OR">
+							<choose>
+								<when test="type == 'T'.toString()">
+									cmtitle like '%'||#{keyword}||'%'
+								</when>
+								<when test="type == 'C'.toString()">
+									cmcontent like '%'||#{keyword}||'%'
+								</when>
+								<when test="type == 'W'.toString()">
+									cmwriter like '%'||#{keyword}||'%'
+								</when>
+							</choose>
+						</trim>
+					</foreach>
+				</trim>
+		</sql>
+
+
+	<!-- getList 처리 -->
+	<select id="getList" resultType="org.zerock.domain.CommunityVO">
+		<![CDATA[
+			select * from community where cmbno > 0
+		]]>
+	</select>
+	
+	
+	<!-- 댓글 카운트 처리 -->
+	<!-- update wfflab_board set replycnt = replycnt + 10 where bno = 41; -->
+	<update id="updateReplyCnt">
+		update community set cmreplycnt = cmreplycnt + #{amount} WHERE cmbno = #{cmbno}
+	</update>
+	
+	<!--getListWithPaging 처리 -->
+	<select id="getListWithPaging" resultType="org.zerock.domain.CommunityVO">
+		<![CDATA[
+		SELECT CMBNO, CMTITLE, CMCONTENT, CMWRITER, CMDATE, CMUPDATEDATE, cmreplycnt
+		FROM (
+			SELECT
+			/*+ INDEX_DESC(community pk_community) */
+			ROWNUM rn, cmbno, cmtitle, cmcontent, CMWRITER, CMDATE, CMUPDATEDATE, cmreplycnt
+			from community
+			WHERE
+		]]><!-- 검색기능을 위해 조건이 하나 더 들어가기 때문에 CDATA로 나눔 -->
+		
+		<include refid="criteria"></include>
+
+	   <!-- 
+		<trim prefix="(" suffix=") AND " prefixOverrides="OR">
+			<foreach item="type" collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'T'.toString()">
+							title like '%'||#{keyword}||'%'
+						</when>
+						<when test="type == 'C'.toString()">
+							content like '%'||#{keyword}||'%'
+						</when>
+						<when test="type == 'W'.toString()">
+							writer like '%'||#{keyword}||'%'
+						</when>
+					</choose>
+				</trim>
+			</foreach>		
+		</trim>
+		 -->
+		<![CDATA[
+			 ROWNUM <= #{pageNum} * #{amount}
+			)
+		WHERE RN > (#{pageNum} - 1) * #{amount}
+		]]>	
+	</select>
+	
+	<select id="getTotalCount" resultType="int">
+		SELECT COUNT(*) from community 
+		where 
+		<include refid="criteria"></include>
+		cmbno > 0
+	</select>
+	
+	<!-- INSERT 처리 -->
+	<!-- insert into review(rebno, retitle, recontent, rewriter)
+	values(seq_review.nextval, '테스트제목', '테스트 내용', '작성자'); -->
+	<insert id="insertSelectKey">
+		<selectKey resultType="long" order="BEFORE" keyProperty="cmbno">
+			SELECT seq_community.nextval from dual 
+		</selectKey>
+		INSERT INTO community(cmbno, cmtitle, cmcontent, cmwriter) VALUES(#{cmbno}, #{cmtitle}, #{cmcontent}, #{cmwriter}) 
+	</insert>
+	
+	
+	<!-- GET 처리 -->
+	<!-- read : select * from wfflab_board where bno = 5 -->
+	<select resultType="org.zerock.domain.CommunityVO" id="read">
+		select * from community where cmbno = #{cmbno} 
+	</select>
+	
+	<!-- UPDATE 처리 -->
+	<!--  UPDATE wfflab_board set title = #{title}, content = #{content}, writer = #{writer}, updatedate = sysdate where bno = 5;  -->
+	<update id="update">
+		UPDATE community set cmtitle = #{cmtitle}, cmcontent = #{cmcontent}, cmwriter = #{cmwriter}, cmupdatedate = sysdate where cmbno = #{cmbno}
+	</update>
+	
+	<!-- DELETE 처리 -->  
+	<!-- DELETE from tbl_board WHERE bno = 40 -->
+	<delete id="delete">
+		DELETE from community WHERE cmbno = #{cmbno}
+	</delete>
+	
+	             
+</mapper>

@@ -1,0 +1,77 @@
+.panel-body{
+    padding: 8% 12%;
+    background-color: #0F1A25;
+}
+input:focus{
+    border: 0.7px solid #E72D5A !important;
+    box-shadow: none !important;
+}
+
+textarea:focus{
+    border: 0.7px solid #E72D5A !important;
+    box-shadow: none !important;
+}
+
+.panel-body p{
+    font-size: 2em !important;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2%;
+}
+
+.panel-body .form-group{
+    font-size: 1rem;
+    margin-bottom: 2%;
+    color: #fff;
+}
+
+.input-group{
+    width: 350px;
+}
+
+.form-control,.input-group-text{
+    border: 0.7px solid #E1D9E4;
+    background-color: #E1D9E4;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 18px;
+    font-size: 0.7rem;
+}
+
+.input-group-text{
+    background-color: #0F1A25;
+    color: #fff;
+}
+
+
+
+.sub_btn{
+    background-color: #50B7CD ;
+    border:  1px solid #50B7CD;
+    border-radius: 5px;
+    color: #0F1A25;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.reset_btn{
+    background-color: #E72D5A ;
+    border:  1px solid #E72D5A;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.panel-body .goList{
+	background-color: #50B7CD ;
+    border:  1px solid #50B7CD;
+    border-radius: 5px;
+    color: #0F1A25;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 10px 8px;
+    font-size: 12px
+}

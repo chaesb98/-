@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="payment">
+
+	<resultMap type="Payment" id="payResult">
+		<result property="imp_uid" column="PAY_ID"/> <!-- 시리얼번호 or 가맹점번호 -->
+		<result property="merchant_uid" column="import_id" /> <!-- 주문번호 -->
+		<result property="name" column="pname" /> <!-- 상품명 -->
+		<result property="amount" column="PAY_AMOUNT"/> <!-- 상품가격 -->
+		<result property="apply_num" column="PER_NUM"/> <!-- 신용카드 승인번호 -->
+		<result property="buyer_name" column="pbuyer" /> <!-- 구매자 이름 -->
+		<result property="buyer_addr" column="paddress" /> <!-- 구매자 주소 -->
+		<result property="buyer_email" column="pemail" /> <!-- 구매자 이메일 -->
+		<result property="paidd_at" column="PER_TIME"/> <!-- 결제 날짜 -->
+	</resultMap>
+	
+	<insert id="insertPaymentSuccess">
+	    <!-- 
+	        insert into pay_import values(idx_seq.nextval, 'jangnara', 10, 'num01', sysdate)
+	    -->
+	    insert into pay(PAY_ID, import_id, pname, PAY_AMOUNT, PER_NUM, pbuyer, paddress, pemail, PER_TIME) 
+	    	values(#{imp_uid}, #{merchant_uid}, #{name}, #{amount}, #{apply_num}, #{buyer_name}, #{buyer_addr}, #{buyer_email}, #{paidd_at})
+	</insert>
+  
+</mapper>

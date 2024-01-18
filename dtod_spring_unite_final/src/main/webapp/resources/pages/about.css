@@ -1,0 +1,104 @@
+/********** Template CSS **********/
+/*** Spinner ***/
+
+img.animated.pulse {
+    animation-duration: 5s;
+}
+
+body{
+    background-color: #0F1A25;
+}
+
+.container-fluid{
+    background-color: #0F1A25;
+}
+.last_contents{
+	margin-bottom: 150px
+}
+.abvideo{
+    width: 100%;
+}
+
+.sul_intro{
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.pink{
+    color: #E72D5A;
+    font-weight: bold;
+}
+
+.py-5 .row{
+    margin-top: 100px;
+}
+
+
+.sub_intro{
+    color: #ccc;
+    font-size: 24px;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0%;
+    height: 60px;
+    border-bottom: 1.5px dashed rgba(255, 255, 255, 0.3);
+}
+
+.feature-item{
+    transition: all 0.5s;
+}
+
+.feature-item:hover{
+    transform: scale(1.05);
+}
+
+.feature-item:hover .sub_intro{
+    color: #fff;
+}
+
+.intro_box{
+    background-color: #50B7CD;
+    border-radius: 10px;
+    height: 120px;
+    color: #fff;
+    line-height: 120px;
+    margin-bottom: 80px;
+    color: #0F1A25;
+}
+
+.intro_box:after {
+    content:""; 
+    position: absolute; 
+    right: 50%; 
+    transform: translateX(50%);
+    top: 180px; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-top: 30px solid #50B7CD;
+}
+
+.feature-item:hover .intro_box{
+    background-color: #E72D5A;
+    color: #fff;
+}
+
+.feature-item:hover .intro_box::after{
+    border-top: 30px solid #E72D5A;
+}
+
+.goSub{
+    color: #fff;
+    width: 20%;
+    height: 50px;
+    background-color: #E72D5A;
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    border-radius: 10px;
+    line-height: 50px;
+}
+.goSub:hover{
+    color: #0F1A25;
+}
