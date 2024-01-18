@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="120dp"
+        android:fontFamily="@font/designhousebold"
+        android:gravity="center"
+        android:text="술결은 만19세 이상만 \n 이용 가능한 서비스입니다"
+        android:textColor="#FCD9D7"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/about3" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/designhousebold"
+        android:textColor="#FCD9D7"
+        android:textSize="18dp"
+        android:text="만19세 이상입니다." />
+
+    <Button
+        android:id="@+id/goStart"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/pointbtn"
+        android:fontFamily="@font/designhousebold"
+        android:text="시작하기"
+        android:textSize="20dp" />
+
+</LinearLayout>

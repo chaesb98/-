@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidappstudy.finalproject_android">
+
+    <!-- 안드로이드앱 구글맵 연결 권한 설정 : 아래 3줄 소스 추가 -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- INTERNET uses-permission 추가 : 안드로이드 앱 http 통신 허용 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcherfinal"
+        android:label="FinalProject_Android"
+        android:roundIcon="@mipmap/ic_launcherfinal_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.FinalProject_Android">
+
+        <activity android:name=".AboutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--  SignUpActivity 처리 클래스 추가-->
+        <activity android:name=".SignUpActivity"></activity>
+
+        <activity android:name=".SecondActivity"></activity>
+
+        <activity android:name=".LocationActivity"></activity>
+
+        <activity android:name=".ServiceActivity"></activity>
+
+        <activity android:name=".MainActivity"></activity>
+
+        <!-- LoginActivity 처리 클래스 추가 -->
+        <activity android:name=".LoginActivity"></activity>
+
+
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBAC2ubQX2_Wh3VEpp7lcV6RAMGB3B19V8"/>
+    </application>
+
+
+
+
+
+
+</manifest>

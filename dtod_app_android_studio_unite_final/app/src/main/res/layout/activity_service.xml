@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ServiceActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="400dp"
+                android:layout_height="120dp"
+                android:fontFamily="@font/designhousebold"
+                android:gravity="center"
+                android:text="술과 영화"
+                android:textColor="#FCD9D7"
+                android:textSize="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#BADEEC"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/designhousebold"
+                    android:gravity="left"
+                    android:text="  어쩐지 지치는 날, 혼자만의 시간이 필요할 때"
+                    android:textColor="#E72D5A"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="170dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        app:srcCompat="@drawable/service1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:fontFamily="@font/pretendardbold"
+                            android:gravity="center"
+                            android:text="리틀포레스트&amp;막걸리"
+                            android:textColor="#3F133D"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/pretendardregular"
+                            android:gravity="center"
+                            android:text="'힐링이 필요한 당신에게' \n 무해한 영화와 함께 막걸리를 마시다보면, 고단했던 하루도 금방 잊혀집니다."
+                            android:textColor="#0F1A25"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#BADEEC"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/designhousebold"
+                    android:gravity="right"
+                    android:text="  이제 막 시작한 연인들을 위해"
+                    android:textColor="#E72D5A"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:fontFamily="@font/pretendardbold"
+                            android:gravity="center"
+                            android:text="내 머리 속의 지우개&amp;소주"
+                            android:textColor="#3F133D"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="167dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="3dp"
+                            android:fontFamily="@font/pretendardregular"
+                            android:gravity="center"
+                            android:text="'소중한 것을 놓치지 않도록' \n 사랑하는 연인과 소주 한 잔 기울이며 영화를 보면 서로가 더욱 애틋해질거에요."
+                            android:textColor="#0F1A25"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="180dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        app:srcCompat="@drawable/service2" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#BADEEC"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/designhousebold"
+                    android:gravity="left"
+                    android:text="  화려한 액션으로 짜릿함을 느끼고 싶을 때"
+                    android:textColor="#E72D5A"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="170dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        app:srcCompat="@drawable/service3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:fontFamily="@font/pretendardbold"
+                            android:gravity="center"
+                            android:text="007 시리즈&amp;마티니"
+                            android:textColor="#3F133D"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/pretendardregular"
+                            android:gravity="center"
+                            android:text="'젓지 말고 흔들어서' \n 박진감 넘치는 액션을 보며 제임스 본드가 즐겨 마시는 보드카 마티니를 즐겨보세요."
+                            android:textColor="#0F1A25"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="#BADEEC"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/designhousebold"
+                    android:gravity="right"
+                    android:text="  친구들과 가볍게 파자마 파티하며"
+                    android:textColor="#E72D5A"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:fontFamily="@font/pretendardbold"
+                            android:gravity="center"
+                            android:text="라따뚜이&amp;샴페인"
+                            android:textColor="#3F133D"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="167dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="3dp"
+                            android:fontFamily="@font/pretendardregular"
+                            android:gravity="center"
+                            android:text="'편한 사람들과 펀하게' \n 편견없는 이야기를 보며 가벼운 대화를 나눠보세요. 샴페인에 라따뚜이를 곁들이면 더 좋아요! "
+                            android:textColor="#0F1A25"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="180dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        app:srcCompat="@drawable/service4" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="370dp"
+                android:layout_height="320dp"
+                android:layout_marginBottom="120dp"
+                app:cardBackgroundColor="#917790"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="280dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            app:srcCompat="@drawable/service5" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendardbold"
+                            android:gravity="center"
+                            android:text="'카모메식당'엔 하이볼"
+                            android:textColor="#3F133D"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="280dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            app:srcCompat="@drawable/service6" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendardbold"
+                            android:gravity="center"
+                            android:text="'중경삼림'엔 칭따오"
+                            android:textColor="#3F133D"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainFragment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
